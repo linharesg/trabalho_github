@@ -28,6 +28,26 @@ def exibir_favoritos(id_usuario) -> None:  # 5
 
 
 
+def anunciar_carro(marca:str, modelo:str, cor:str, ano:int, km:int, preco:float, sobre:str):
+    """
+    Essa função anuncia um carro em nosso programa
+    """
+    carro = {
+            'Marca': marca,
+            'Modelo': modelo,
+            'Cor': cor,
+            'Ano': ano,
+            'Km': km,
+            'Preco': preco,
+            'Sobre': sobre
+    }
+
+    carros_anunciados[id_carro] = carro
+
+    print("Carro anunciado com sucesso.")
+
+
+
 carros_anunciados = {
     "car_1": {"Marca": "Ford", "Modelo": "Focus", "Cor": "Vermelho", "Ano": 2010, "km": 56000, "Preço": 89190},
     "car_2": {"Marca": "Hyundai", "Modelo": "HB20", "Cor": "Preto", "Ano": 2020, "km": 10000, "Preço": 90000},
