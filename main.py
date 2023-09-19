@@ -99,6 +99,9 @@ def anunciar_carro(marca:str, modelo:str, cor:str, ano:int, km:int, preco:float,
     """
     Essa função anuncia um carro em nosso programa
     """
+
+    id_carro = "car_" + str(len(carros_anunciados) + 1)
+
     carro = {
             'Marca': marca,
             'Modelo': modelo,
@@ -111,15 +114,15 @@ def anunciar_carro(marca:str, modelo:str, cor:str, ano:int, km:int, preco:float,
 
     carros_anunciados[id_carro] = carro
 
-    print("Carro anunciado com sucesso.")
+    input("Carro anunciado com sucesso.")
 
 
 
 carros_anunciados = {
-    "car_1": {"Marca": "Ford", "Modelo": "Focus", "Cor": "Vermelho", "Ano": 2010, "km": 56000, "Preço": 89190},
-    "car_2": {"Marca": "Hyundai", "Modelo": "HB20", "Cor": "Preto", "Ano": 2020, "km": 10000, "Preço": 90000},
-    "car_3": {"Marca": "Chevrolet", "Modelo": "Vectra", "Cor": "Branco", "Ano": 2001, "km": 180000, "Preço": 43000},
-    "car_4": {"Marca": "Ford", "Modelo": "Fusion", "Cor": "Preto", "Ano": 2015, "km": 60000, "Preço": 100000}
+"car_1": {"Marca": "Ford", "Modelo": "Focus", "Cor": "Vermelho", "Ano": 2010, "km": 56000, "Preço": 89190, "Sobre": "Descrição sobre o carro1"},
+"car_2": {"Marca": "Hyundai", "Modelo": "HB20", "Cor": "Preto", "Ano": 2020, "km": 10000, "Preço": 90000, "Sobre": "Descrição sobre o carro2"},
+"car_3": {"Marca": "Chevrolet", "Modelo": "Vectra", "Cor": "Branco", "Ano": 2001, "km": 180000, "Preço": 43000, "Sobre": "Descrição sobre o carro3"},
+"car_4": {"Marca": "Ford", "Modelo": "Fusion", "Cor": "Preto", "Ano": 2015, "km": 60000, "Preço": 100000, "Sobre": "Descrição sobre o carro4"}
 }
 
 usuarios = {
@@ -187,11 +190,21 @@ informe a função de acordo com o Menu:
             pass
 
         case "6":  # Anunciar carro
-            pass
+            print("Digite abaixo as informações sobre o carro a ser anunciado: ")
+            marca = input("Marca: ")
+            modelo = input("Modelo: ")
+            cor = input("Cor: ")
+            ano = int(input("Ano: "))
+            km = int(input("Km: "))
+            preco = float(input("Preço: "))
+            sobre = input("Sobre: ")
+
+            anunciar_carro(marca, modelo, cor, ano, km, preco, sobre)
 
         case "7":  # Filtrar por marca
             marca = input("Digite a marca: ")
             carros_por_marca(marca)
+
 
         case _:
             break
