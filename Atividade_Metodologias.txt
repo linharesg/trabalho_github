@@ -1,0 +1,62 @@
+﻿PYTHON MOTORS
+
+
+EQUIPE:
+Product Owner: Thiago Bastos
+Scrum Master: Cibelly Freitas
+Developer Team: 
+Gabriel Linhares
+Guilherme Eduardo
+Raissa Ecker
+
+
+
+
+Menu inicial de introdução:
+1. Criar conta
+   1. Nome
+   2. E-mail
+   3. Telefone
+   4. Após a conta ser criada, ela receberá um ID gerado automaticamente.
+2. Logar
+3. Anunciar
+4. Pesquisar
+   1. Marca
+   2. Modelo
+   3. Cor
+   4. Ano
+   5. Km
+   6. Faixa de preço
+5. Adicionar favoritos
+6. Consultar favoritos
+7. Comprar
+8. Compartilhar anúncio
+HISTÓRIAS:
+* Como usuário, quero me registrar no site (inserindo minhas informações: nome, email, telefone e definir uma senha)
+
+
+* Como usuário, quero logar no site
+
+
+* Como usuário, ao abrir o site quero visualizar anúncios de carros ativos
+
+
+* Como usuário, quero fazer um anuncio (Inserindo as informações do veículo: marca, modelo, cor, ano, km, preço e sobre o veículo)
+
+
+* Como usuário, quero pesquisar por anúncios de carro com base em informações relevantes (marca, modelo, cor, ano, km, faixa de preço)
+
+
+* Como usuário, quero clicar em um anúncio para ver as informações completas
+
+
+* Como usuário, quero comprar um carro (Utilizando a função comprar do site, que envia os dados da minha conta e uma mensagem personalizada por mim ao vendedor)
+
+
+* Como usuário, quero marcar anúncios como favoritos
+
+
+* Como usuário, quero ver meus anúncios favoritados em uma aba separada
+
+
+* Como usuário, quero compartilhar um anúncio (Via: whatsapp ou email)
