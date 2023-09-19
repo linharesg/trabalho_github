@@ -1,7 +1,8 @@
 ﻿PYTHON MOTORS - Venda e Compra de Carros
 
 ATIVIDADE:
-- Referente as aulas de Metodologias Ágeis e Git e GitHub
+- Referente:    Módulo 02 - Metodologias Ágeis para TI
+                Módulo 03 - Git e GitHub
 EQUIPE:
 Product Owner: Thiago Bastos
 Scrum Master: Cibelly Freitas
