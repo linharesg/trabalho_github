@@ -71,6 +71,17 @@ def exibir_favoritos(id_usuario) -> None:  # 5
     pass
     return
 
+def carros_por_cor(cor: str) -> None:
+    total_carros = 0
+    print()
+    for i in carros_anunciados:
+        if carros_anunciados[i]['Cor'] == cor:
+            print(f"ID {i}: {carros_anunciados[i]}")
+            total_carros += 1
+    if total_carros == 0:
+        print("Não foram encontrados carros na cor informada!")
+    return
+
 
 def carros_por_marca(marca: str) -> None:
     total_carros = 0
