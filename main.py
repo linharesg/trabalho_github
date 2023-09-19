@@ -11,8 +11,34 @@ def efetuar_login() -> str:  # 1
 
 
 def criar_conta():  # 3
-    pass
+    nome = input("Informe seu nome completo: ")
+    email = input("informe seu e-mail: ")
+    aux = 0
+    while aux == 0:
+        aux = 1
+        for i, vale in usuarios.items():
+            if usuarios[i]["Email"] == email:
+                email = input(f"O nome de usuário {email} não está disponível! Escolha outro:")
+                aux = 0
 
+    telefone = input("Informe seu telefone")
+    usuario = input("Informe o nome para seu usuário:")
+
+    while True:
+        if usuario in usuarios.keys():
+            usuario = input(f"O nome de usuário {usuario} não está disponível! Escolha outro:")
+            continue
+        break
+    senha = input("Informe sua senha: ")
+
+    usuarios[usuario] = {
+        "Nome: ": nome,
+        "Email": email,
+        "Telefone": telefone,
+        "senha": senha
+    }
+    input(f"\nConta criada com sucesso! Você está logado como {usuario}.")
+    return usuario
 
 
 
@@ -77,10 +103,10 @@ informe a função de acordo com o Menu:
 
 
         case "3":  # Criar conta
-            pass
-
-
-
+            if conta_logada != 0:
+                input("Antes de criar outra conta, é necessário sair da conta que está logada!")
+            else:
+                conta_logada = criar_conta()
 
         case "4":  # Adicionar aos favoritos
             pass
