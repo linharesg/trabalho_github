@@ -1,6 +1,7 @@
-﻿PYTHON MOTORS - Venda e compra de carros
+﻿PYTHON MOTORS - Venda e Compra de Carros
 
-
+ATIVIDADE:
+- Referente as aulas de Metodologias Ágeis e Git e GitHub
 EQUIPE:
 Product Owner: Thiago Bastos
 Scrum Master: Cibelly Freitas
