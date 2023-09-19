@@ -25,7 +25,16 @@ def adicionar_favorito(id_carro: str, conta_logada: str) -> None:  # 4
 def exibir_favoritos(id_usuario) -> None:  # 5
     pass
 
-
+def carros_por_marca(marca: str) -> None:
+    total_carros = 0
+    print()
+    for i in carros_anunciados:
+        if carros_anunciados[i]['Marca'] == marca:
+            print(f"ID {i}: {carros_anunciados[i]}")
+            total_carros += 1
+    if total_carros == 0:
+        print("Não foram encontrados carros da marca informada!")
+    return
 
 
 carros_anunciados = {
