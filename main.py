@@ -25,7 +25,6 @@ def efetuar_login() -> str:  # 1
 
 
 def criar_conta():  # 3
-
     nome = input("Informe seu nome completo: ")
     email = input("informe seu e-mail: ")
     aux = 0
@@ -57,7 +56,6 @@ def criar_conta():  # 3
 
 
 def adicionar_favorito(id_carro: str, conta_logada: str) -> None:  # 4
-
     if conta_logada not in favoritos.keys():
         favoritos[conta_logada] = [id_carro]
         input("Carro adicionado aos favoritos! Digite qualquer telca para retornar ao Menu.")
@@ -68,9 +66,8 @@ def adicionar_favorito(id_carro: str, conta_logada: str) -> None:  # 4
 
 
 def exibir_favoritos(id_usuario) -> None:  # 5
-
     if id_usuario == 0:
-        resposta = input("Para exibir seus favoritos é necessário efetuar o login.").upper()
+        input("Para exibir seus favoritos é necessário efetuar o login.").upper()
         return
 
     if id_usuario not in favoritos.keys():
@@ -109,7 +106,7 @@ def carros_por_marca(marca: str) -> None:
     return
 
 
-def anunciar_carro(marca:str, modelo:str, cor:str, ano:int, km:int, preco:float, sobre:str):
+def anunciar_carro(marca: str, modelo: str, cor: str, ano: int, km: int, preco: float, sobre: str):
     """
     Essa função anuncia um carro em nosso programa
     """
@@ -163,7 +160,8 @@ informe a função de acordo com o Menu:
 4) Adicionar carro ao favorito
 5) Exibir favoritos
 6) Anunciar carro
-7) Pesquisar por anúncios
+7) Filtrar por marca
+8) Filtrar por cor
 """)
 
     match funcao:
@@ -219,6 +217,10 @@ informe a função de acordo com o Menu:
             marca = input("Digite a marca: ")
             carros_por_marca(marca)
 
+        case "8": # Filtrar por cor
+            cor = input("Digite a cor: ")
+            carros_por_cor(cor)
 
         case _:
-            break
+            input("Intrada inválida! Selecione uma das opções do Menu.")
+            continue
