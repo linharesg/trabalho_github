@@ -17,8 +17,14 @@ def criar_conta():  # 3
 
 
 def adicionar_favorito(id_carro: str, conta_logada: str) -> None:  # 4
-    pass
 
+    if conta_logada not in favoritos.keys():
+        favoritos[conta_logada] = [id_carro]
+        input("Carro adicionado aos favoritos! Digite qualquer telca para retornar ao Menu.")
+        return
+    favoritos[conta_logada].append(id_carro)
+    input("Carro adicionado aos favoritos! Digite qualquer telca para retornar ao Menu.")
+    return
 
 
 
@@ -83,9 +89,22 @@ informe a função de acordo com o Menu:
 
 
         case "4":  # Adicionar aos favoritos
-            pass
+            if conta_logada == 0:
+                resposta = input("Para adicionar um carro aos favoritos é necessário fazer o login.").upper()
+                continue
+
+            id_anuncio = input("Informe o ID do carro a ser adicionado aos favoritos: ")
+
+            if id_anuncio not in (carros_anunciados.keys()):
+                input(f"Não foi encontado nenhum carro de ID {id_anuncio}!")
+                continue
+            if id_anuncio in favoritos[conta_logada]:
+                input("Você já tem este carro adicionado nos seus favoritos!")
+                continue
+            adicionar_favorito(id_anuncio, conta_logada)
 
 
+            print(favoritos)
 
 
         case "5":  # Exibir favoritos
