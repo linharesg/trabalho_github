@@ -23,7 +23,22 @@ def adicionar_favorito(id_carro: str, conta_logada: str) -> None:  # 4
 
 
 def exibir_favoritos(id_usuario) -> None:  # 5
-    pass
+
+    if id_usuario == 0:
+        resposta = input("Para exibir seus favoritos é necessário efetuar o login.").upper()
+        return
+
+    if id_usuario not in favoritos.keys():
+        input("Você não possui nenhum carro adicionado aos favoritos!")
+    else:
+        for favoritados in favoritos[id_usuario]:
+            for carro, caracteristicas in carros_anunciados.items():
+                if favoritados == carro:
+                    print(f"\n{carro}: ", end="")
+                    for atributo, valor in caracteristicas.items():
+                        print(f"{atributo}: {valor}", end=" | ")
+    input("\n")
+    return
 
 
 
@@ -44,7 +59,7 @@ usuarios = {
 }
 
 favoritos = {
-    "gabriel.96": ["car_1"],
+    "gabriel.96": ["car_1", "car_3"],
     "souza21": ["car_2", "car_4"]
 }
 
@@ -89,13 +104,7 @@ informe a função de acordo com o Menu:
 
 
         case "5":  # Exibir favoritos
-            pass
-
-
-
-
-        case "5":  # Exibir favoritos
-            pass
+            exibir_favoritos(conta_logada)
 
 
 
