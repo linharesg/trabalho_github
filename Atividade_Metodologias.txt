@@ -7,8 +7,8 @@ EQUIPE:
 Product Owner: Thiago Bastos
 Scrum Master: Cibelly Freitas
 Development Team: 
-Gabriel Linhares - anunciar um carro.
-Guilherme Eduardo - efetuar login, adicionar favoritos e exibir favoritos.
+Gabriel Linhares - efetuar login, adicionar favoritos e exibir favoritos.
+Guilherme Eduardo - anunciar um carro.
 Raissa Ecker - filtrar por cor e filtrar por marca.
 
 
